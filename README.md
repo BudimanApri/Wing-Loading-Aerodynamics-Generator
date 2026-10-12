@@ -61,9 +61,3 @@ CSV exports include units and `#` JSON metadata comments; read with `pandas.read
 ```
 
 Tests generate synthetic analytic fixtures and do not require private CFD datasets. They cover force/moment signs, vector totals, references, conservative binning, geometry, interpolation, parser/cache behavior, asymmetric-span root handling and beam integrals.
-
-## Public repository hygiene
-
-Create the repository from the application directory. Ignore rules allow source, tests, dependencies, launcher, public documentation and empty data directories. They exclude CFD exports, local configuration, caches/results, virtual environments, credentials and project-specific inspection helpers/notes.
-
-Do not force-add ignored files. Ignore rules do not protect already-tracked files or credentials embedded in source. Review staged changes and scan for secrets before publication. Case settings are stored in ignored `data/configuration.json`. Exported reports may include local paths and simulation metadata; review them before sharing separately.
